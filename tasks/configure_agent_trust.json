@@ -1,7 +1,7 @@
 {
   "puppet_task_version": 1,
   "supports_noop": false,
-  "description": "Configure an agent\'s CA files to use a specified CA server",
+  "description": "Configure an agent's CA files to use a specified CA server",
   "parameters": {
     "server": {
       "type": "String",

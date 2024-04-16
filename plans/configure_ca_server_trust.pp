@@ -1,11 +1,9 @@
 # @summary Configures two CA servers for mutual trust
 #
 # @param targets
-
 #   The CA server targets that should be configured for mutual trust
 #   relationships. Generally speaking, this should simply be the list of
 #   Puppet CA servers that mutual trust should be established between.
-
 # @param ca_hosts
 #   The CA systems to gather trust information from. By default, this will
 #   be the same as the set of targets. Sometimes it may be desirable to gather
@@ -103,7 +101,7 @@ plan puppet_ca_utils::configure_ca_server_trust (
     service { 'pe-puppetserver': }
   }
 
-  # Note: agents and compilers will recieve the updated CA bundle and CRL through normal
+  # Note: agents and compilers will receive the updated CA bundle and CRL through normal
   # distribution means
 
   return('Complete')
