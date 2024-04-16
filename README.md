@@ -1,6 +1,6 @@
 # puppet\_ca\_utils
 
-Synchrozies certificates from differing Puppet CAs so that agents can be transfered easily between them.
+Synchronises certificates from differing Puppet CAs so that agents can be transferred easily between them.
 
 ## Usage
 
@@ -14,7 +14,7 @@ bolt plan run puppet_ca_utils::configure_ca_server_trust \
   --target puppet-ca-02.example.com
 ```
 
-Asymetrical usage. Configures puppet-ca-01 to trust certs issued by either CA, but does not configure puppet-ca-02 to trust puppet-ca-01.
+Asymmetrical usage. Configures puppet-ca-01 to trust certs issued by either CA, but does not configure puppet-ca-02 to trust puppet-ca-01.
 
 ```
 bolt plan run puppet_ca_utils::configure_ca_server_trust \
@@ -35,5 +35,3 @@ bolt task run puppet_ca_utils::configure_agent_trust \
 ## Limitations
 
 The puppet\_ca\_utils::configure\_ca\_servers plan does not have safeguards. It is possible to accidentally overwrite CA configuration in a non-ideal way if the parameters given are incorrect. For example, it is possible to configure a CA server not to trust its own issued certificates, and lose CA data in the process.
-
-## Development
